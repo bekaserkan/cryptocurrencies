@@ -1,0 +1,96 @@
+.applications {
+  margin-top: 130px;
+  width: 100%;
+}
+
+.applications .applications_block {
+  margin-top: 30px;
+  width: 100%;
+  border-radius: 20px;
+  padding: 20px;
+  background: var(--gray_ww);
+}
+
+.applications .applications_block_head {
+  width: 100%;
+  border-radius: 14px;
+  padding: 40px 30px;
+  background: var(--white);
+  display: flex;
+  justify-content: space-between;
+}
+
+.applications .input_form {
+  max-width: 110px;
+}
+
+.applications .applications_block_body {
+  margin-top: 12px;
+  width: 100%;
+  border-radius: 14px;
+  padding: 20px;
+  background: var(--white);
+}
+
+.applications .div_auth {
+  width: 100%;
+  min-height: 290px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  gap: 48px;
+}
+
+.applications .div_auth .text {
+  width: 50%;
+  text-align: center;
+  font-size: 18px;
+  font-weight: 400;
+  color: #969696;
+}
+
+.applications .button_form {
+  width: auto;
+}
+
+.applications .title {
+  font-size: 24px;
+  font-weight: 500;
+  color: var(--black);
+}
+
+.applications .btn.up {
+  color: var(--blue);
+  background: transparent;
+}
+
+.applications .flex {
+  display: flex;
+  gap: 10px;
+}
+
+.applications .flex a {
+  text-decoration: none;
+}
+
+.applications .button_form.login {
+  color: var(--blue);
+  font-weight: 500;
+  background: white;
+  box-shadow: none;
+}
+
+.applications .input_block {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  font-weight: 500;
+  color: var(--gray);
+}
+
+.applications .link {
+  font-weight: 500;
+  color: var(--blue);
+}

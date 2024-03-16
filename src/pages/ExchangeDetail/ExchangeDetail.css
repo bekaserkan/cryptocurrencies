@@ -1,0 +1,17 @@
+.exchange_detail .div_auth {
+  width: 100%;
+  min-height: 290px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  gap: 48px;
+}
+
+.exchange_detail .div_auth .text {
+  width: 50%;
+  text-align: center;
+  font-size: 18px;
+  font-weight: 400;
+  color: #969696;
+}
