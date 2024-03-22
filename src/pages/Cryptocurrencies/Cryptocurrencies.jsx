@@ -6,6 +6,7 @@ import image3 from "../../img/logo_c3.svg";
 import image4 from "../../img/logo_c4.svg";
 import image5 from "../../img/logo_c5.svg";
 import image6 from "../../img/logo_c6.svg";
+import { useNavigate } from "react-router-dom";
 
 const data = [
   {
@@ -83,6 +84,8 @@ const data = [
 ];
 
 const Cryptocurrencies = () => {
+  const navigate = useNavigate();
+
   return (
     <div className="cryptocurrencies">
       <div className="container">
@@ -90,8 +93,11 @@ const Cryptocurrencies = () => {
           <h1 className="title_h1">Криптовалюты</h1>
         </div>
         <div className="cryptocurrencies_block">
-          {data.map((el) => (
-            <div className="cryptocurrencies_box">
+          {data.map((el, index) => (
+            <div
+              onClick={() => navigate(`/page-coin/${index + 1}`)}
+              className="cryptocurrencies_box"
+            >
               <img src={el.img} alt="" />
               <p className="text">{el.text}</p>
             </div>

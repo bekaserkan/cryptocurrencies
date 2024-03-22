@@ -67,6 +67,7 @@
 
 .applications .flex {
   display: flex;
+  align-items: center;
   gap: 10px;
 }
 
@@ -93,4 +94,74 @@
 .applications .link {
   font-weight: 500;
   color: var(--blue);
+}
+
+.applications .offers {
+  margin-top: 30px;
+  width: 100%;
+}
+
+.applications .offer,
+.applications .offer_block {
+  display: grid;
+  grid-template-columns: 2fr 0.8fr 1fr 0.8fr 0.8fr 1fr;
+  align-items: center;
+}
+
+.applications .offer {
+  padding: 14px 24px;
+  border-bottom: 1px solid #cacaca;
+}
+
+.applications .offer_text {
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--gray);
+}
+
+.applications .offer_blocks {
+  margin-top: 10px;
+  width: 100%;
+  padding: 12px;
+  background: var(--gray_ww);
+  border-radius: 14px;
+}
+
+.applications .offer_block {
+  padding: 18px 10px;
+  border-radius: 10px;
+  background: #fff;
+}
+
+.applications .offer_block_text {
+  font-size: 16px;
+  font-weight: 400;
+  color: var(--black_w);
+}
+
+.applications .offer_block_title {
+  font-size: 16px;
+  font-weight: 500;
+  color: var(--blue);
+  text-decoration: underline;
+}
+
+.applications .offer_block_time {
+  font-size: 14px;
+  font-weight: 400;
+  color: var(--blue);
+}
+
+.applications .offer_block_btn {
+  color: var(--blue);
+  border: 1px solid var(--blue);
+  background: transparent;
+}
+
+.applications .user {
+  width: 44px;
+  height: 44px;
+  background: 50%;
+  object-fit: cover;
+  object-position: center;
 }

@@ -94,6 +94,7 @@ const Login = () => {
               </NavLink>
             </div>
             <button
+              disabled={loading}
               style={{ margin: "20px 0" }}
               onSubmit={handleSubmit}
               className="button_form"

@@ -10,6 +10,7 @@ import logo5 from "../../img/logo5.svg";
 import logo6 from "../../img/logo6.svg";
 import arrow from "../../img/arrow_red.svg";
 import { api } from "../../Api";
+import { useNavigate } from "react-router-dom";
 
 const datas = [
   {
@@ -46,6 +47,7 @@ const datas = [
 
 const Nav = () => {
   const [data, setData] = useState([]);
+  const navigate = useNavigate();
 
   //   useEffect(() => {
   //     api
@@ -101,7 +103,10 @@ const Nav = () => {
             </div>
             {datas.map((el, id) => (
               <div key={id} className="nav_box_s">
-                <div className="first">
+                <div
+                  onClick={() => navigate(`page-coin/${id}`)}
+                  className="first"
+                >
                   <img src={el.img} alt="" />
                   <p className="name">{el.name}</p>
                 </div>

@@ -10,10 +10,12 @@
   align-items: center;
   flex-direction: column;
   justify-content: center;
-  gap: 48px;
+  padding-bottom: 20px;
 }
 
 .exchange_detail .div_auth .text {
+  margin: 0;
+  width: 60%;
   text-align: center;
   font-size: 18px;
   font-weight: 400;
@@ -83,8 +85,9 @@
 .exchange_detail .star {
   display: flex;
   align-items: center;
-  font-size: 16px;
-  font-weight: 300;
+  gap: 5px;
+  font-size: 14px;
+  font-weight: 500;
   color: var(--gray);
 }
 

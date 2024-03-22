@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import "./ExchangeDetail.css";
 import { NavLink, useParams } from "react-router-dom";
 import map from "../../img/map.svg";
-import number from "../../img/map.svg";
+import number from "../../img/number.svg";
 import photo1 from "../../img/photo_2.svg";
 import star from "../../img/component.svg";
 import eye from "../../img/eyes.svg";

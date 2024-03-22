@@ -16,6 +16,7 @@
   grid-template-columns: 170px 1fr;
   gap: 20px;
   height: 160px;
+  cursor: pointer;
 }
 
 .main_news .main_news_box img {

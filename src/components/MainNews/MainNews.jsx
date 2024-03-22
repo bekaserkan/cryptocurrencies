@@ -66,8 +66,12 @@ const MainNews = () => {
           </p>
         </div>
         <div className="main_news_block">
-          {data.map((el) => (
-            <div className="main_news_box">
+          {data.map((el, index) => (
+            <div
+              key={index}
+              onClick={() => navigate(`/news-datail/${index}`)}
+              className="main_news_box"
+            >
               <img src={el.img} alt="" />
               <div className="flex">
                 <p className="title">{el.title}</p>

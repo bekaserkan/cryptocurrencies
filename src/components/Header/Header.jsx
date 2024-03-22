@@ -1,9 +1,13 @@
-import React from "react";
+import React, { useState } from "react";
 import "./Header.css";
 import logo from "../../img/logo.svg";
+import user from "../../img/ava.svg";
+import star from "../../img/Component2.svg";
 import { NavLink } from "react-router-dom";
 
 const Header = () => {
+  const [auth, setAuth] = useState(true);
+
   return (
     <div className="header">
       <div className="container">
@@ -23,12 +27,31 @@ const Header = () => {
             </NavLink>
           </div>
           <div className="flex">
-            <NavLink to="/login">
-              <button className="button_form login">Войти</button>
-            </NavLink>
-            <NavLink to="/register">
-              <button className="button_form">Регистрация</button>
-            </NavLink>
+            {auth ? (
+              <>
+                <NavLink to="/favorites">
+                  <button className="favorites">
+                    <img src={star} alt="" />
+                    Избранное
+                  </button>
+                </NavLink>
+                <NavLink to="/dashboard">
+                  <img className="user" src={user} alt="" />
+                </NavLink>
+                <NavLink to="/cabinet">
+                  <img className="user" src={user} alt="" />
+                </NavLink>
+              </>
+            ) : (
+              <>
+                <NavLink to="/login">
+                  <button className="button_form login">Войти</button>
+                </NavLink>
+                <NavLink to="/register">
+                  <button className="button_form">Регистрация</button>
+                </NavLink>
+              </>
+            )}
           </div>
         </div>
       </div>

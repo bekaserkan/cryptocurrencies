@@ -6,6 +6,7 @@ import Applications from "../../components/Applications/Applications";
 import Сalculator from "../../components/Сalculator/Сalculator";
 import MainNews from "../../components/MainNews/MainNews";
 import Change from "../../components/Change/Change";
+import Table from "../../components/Table/Table";
 
 const Main = () => {
   const [state, setState] = useState();
@@ -34,6 +35,7 @@ const Main = () => {
     <div className="main">
       <Nav />
       <Course />
+      <Table />
       <Applications />
       <Сalculator />
       <MainNews />
