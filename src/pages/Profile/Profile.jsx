@@ -14,6 +14,7 @@ import Loading from "../../components/UI/Loading/Loading";
 import { FaEye, FaEyeSlash } from "react-icons/fa";
 import add_photo from "../../img/add_photo.svg";
 import timoutImage from "../../img/timout.svg";
+import arrows from "../../img/arrows.svg";
 
 const data = [
   {
@@ -153,7 +154,7 @@ const Profile = () => {
             <h5>Ожидание проверки</h5>
           ) : (
             <>
-              <h5>Заполните данные о компании</h5>
+              <h5>Заполните данные компании</h5>
               <div className="verification_block">
                 <div className="verification_box active">
                   1<p className="absolute_text active">Информация</p>
@@ -198,6 +199,12 @@ const Profile = () => {
                 </form>
               ) : (
                 <form style={{ width: 850 }} className="form_password">
+                  <img
+                    onClick={() => setCount({ ...count, second: false })}
+                    className="back"
+                    src={arrows}
+                    alt=""
+                  />
                   <h1 onClick={() => setCount({ ...count, third: true })}>
                     verification
                   </h1>
@@ -215,6 +222,12 @@ const Profile = () => {
               )
             ) : (
               <form style={{ width: 850 }} className="form_password">
+                <img
+                  onClick={() => setCount({ ...count, first: false })}
+                  className="back"
+                  src={arrows}
+                  alt=""
+                />
                 <div className="grid">
                   <div>
                     <div className="input_box">
@@ -417,7 +430,7 @@ const Profile = () => {
                 </div>
                 <div style={{ height: "100%" }} className="input_box">
                   <label className="label_form">
-                    Условия сделки (до 500 символов)
+                    Описание ({verificationValue.desc.length} /до 200 символов)
                   </label>
                   <textarea
                     style={{ height: "100%" }}
@@ -429,6 +442,7 @@ const Profile = () => {
                         desc: e.target.value,
                       })
                     }
+                    maxLength={200}
                     type="text"
                     placeholder="Напишите несколько предложений о вашей компании"
                     required

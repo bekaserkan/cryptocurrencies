@@ -134,7 +134,9 @@ const PostApplication = () => {
                 </div>
                 <div style={{ height: 263 }} className="input_box">
                   <label className="label_form">
-                    Условия сделки (до 500 символов)
+                    Условия сделки (
+                    {dataApplication.terms_of_a_transaction.length} /до 500
+                    символов)
                   </label>
                   <textarea
                     style={{ height: "100%" }}
@@ -147,6 +149,7 @@ const PostApplication = () => {
                       })
                     }
                     type="text"
+                    maxLength={500}
                     placeholder="Напишите несколько предложений о вашей компании"
                     required
                   />
